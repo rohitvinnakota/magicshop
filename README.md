@@ -20,7 +20,8 @@ Magicshop provides the following
 
 - Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect
 - You will need a Stripe account with stripe connect setup. Paste your stripe PK in the `stripePublishableKey` portion of your Info.plist file.
-  Also paste your stripe SK key in `index.js` on line 3. Strongly consider doing something more secure in a live environment. 
+  Also paste your stripe SK in `index.js` on line 3. Strongly consider doing something more secure in a live environment
+- Update the `/paymentSheet` route in `index.js` to read your stripe PK
 - You will need an AWS account, the AWS CLI tool, and Amplify [installed](https://aws.amazon.com/getting-started/hands-on/build-ios-app-amplify/module-two/) on your machine
 - You will need AWS IVS setup, including having an [IAM user with the proper permissions](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/getting-started.html)
 
