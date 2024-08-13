@@ -5,6 +5,7 @@ The original intention of this project was to build a livestream e-commerce appl
 
 - A live performace app for artists
 - A live auction app
+- A TikTok like shopping experience where livestreams are replaced by static videos
 - An AI NPC portal to allow interactions with digital VTubers, etc.
 
 Magicshop provides the following 
@@ -17,8 +18,8 @@ Magicshop provides the following
 
 ### Setup
 
-- Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect. 
-
+- Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect.
+- You will need a Stripe account with stripe connect setup. 
 - You will need an AWS account, the AWS CLI tool, and Amplify [installed](https://aws.amazon.com/getting-started/hands-on/build-ios-app-amplify/module-two/) on your machine
 - You will need AWS IVS setup, including having an [IAM user with the proper permissions](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/getting-started.html)
 
