@@ -1,4 +1,4 @@
-# magicshop
+# ✨ magicshop ✨ 
 Starter template for building apps of the future.
 
 The original intention of this project was to build a livestream e-commerce application similar to Alibaba Live or Whatnot. It supports setup of concurrent livestreams, each with 1 click purchasing enabled from within the stream. However, with a few clever additions, this can be easily extended to other use cases such as: 
@@ -16,7 +16,7 @@ Magicshop provides the following
 - An out-of-the-box implementation of a sign-up/login flow that supports Sign in With Apple
 - Various little features that support a smooth flow between different services that power the app(more below)
 
-### Setup
+### 📜 Setup 📜
 
 - Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect
 - You will need a Stripe account with stripe connect setup. Paste your stripe PK in the `stripePublishableKey` portion of your Info.plist file.
@@ -34,7 +34,7 @@ Magicshop provides the following
 - Then open a simulator in XCode and you should be able to run the base version of magicshop!
 
 
-### Future improvements 
+### 🧱 Future improvements 🧱
 
 - Please follow best security practices if you are running this on a live server. This includes secure endpoints, non-hardcoded keys, etc.
 - There are a few manual processes(such as seller onboarding) that take place outside the app. There is potential for these to be automated down the road.
