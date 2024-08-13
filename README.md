@@ -14,14 +14,22 @@ Magicshop provides the following
 - Live streaming from the app and a live chat interface for each stream 
 - A Stripe Connect integration to process payments directly from each stream
 - An out-of-the-box implementation of a sign-up/login flow that supports Sign in With Apple
-- Various little features that support a smooth flow between different services that power the app(more below).  
+- Various little features that support a smooth flow between different services that power the app(more below)
 
 ### Setup
 
-- Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect.
-- You will need a Stripe account with stripe connect setup. 
+- Magicshop relies on a few key services. AWS IVS, AWS Amplify, and Stripe Connect
+- You will need a Stripe account with stripe connect setup. Paste your stripe PK in the `stripePublishableKey` portion of your Info.plist file
 - You will need an AWS account, the AWS CLI tool, and Amplify [installed](https://aws.amazon.com/getting-started/hands-on/build-ios-app-amplify/module-two/) on your machine
 - You will need AWS IVS setup, including having an [IAM user with the proper permissions](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/getting-started.html)
+
+- You will need to generate Amplify config files before running the app. If you are setting the project up for the first time, from the root folder run 
+
+`amplify init` and choose an `ios App` as your app type. 
+
+- You will need to ensure your backend is running first. From the Node-Backend dir, run `npm install && npm start`
+
+- Then open a simulator in XCode and you should be able to run the base version of magicshop!
 
 
 ### Future improvements 
