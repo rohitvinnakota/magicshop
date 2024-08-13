@@ -25,11 +25,13 @@ Magicshop provides the following
 - You will need an AWS account, the AWS CLI tool, and Amplify [installed](https://aws.amazon.com/getting-started/hands-on/build-ios-app-amplify/module-two/) on your machine
 - You will need AWS IVS setup, including having an [IAM user with the proper permissions](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/getting-started.html)
 
-- You will need to generate Amplify config files before running the app. If you are setting the project up for the first time, from the root folder run 
+- You will need to generate Amplify config files before running the app. If you are setting the project up for the first time, from the magicshop folder run 
 
 `amplify init` and choose an `ios App` as your app type. 
 
 - You will need to ensure your backend is running first. From the Node-Backend dir, run `npm install && npm start`
+
+- Run `pod install` from the magicshop folder
 
 - Then open a simulator in XCode and you should be able to run the base version of magicshop!
 
