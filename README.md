@@ -8,7 +8,7 @@ The original intention of this project was to build a livestream e-commerce appl
 - A TikTok like shopping experience where livestreams are replaced by static videos
 - An AI NPC portal to allow interactions with digital VTubers, etc.
 
-Magicshop provides the following 
+Magicshop provides the following
 
 - A starter UI that supports a "feed" of streams 
 - Live streaming from the app and a live chat interface for each stream 
