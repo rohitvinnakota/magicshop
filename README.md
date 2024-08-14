@@ -31,7 +31,8 @@ Magicshop provides the following
 
 - You will also need to setup a Data model. Here is a starter schema that can be modified as necesscary 
 
-```type StreamPreviewInfoV0 @model @auth(rules: [{allow: public}]) {
+```
+type StreamPreviewInfoV0 @model @auth(rules: [{allow: public}]) {
   id: ID!
   streamName: String
   channelArn: String
