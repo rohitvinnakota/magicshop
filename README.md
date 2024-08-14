@@ -88,6 +88,12 @@ type Users @model @auth(rules: [{allow: public}]) {
 - Ensure you are regularly updating expirys on your IAM users and keys, as this is a common issue.
 
 
+### 🫴 Some gotchas 🫴
+
+- Setting up sign in with Apple in a live enviorment is a bit of a headache. This project assumes you have set that up on your developer account
+- Ensure you open the workspace file for the app to run in the simulator 
+
+
 ## Screenshots
 
 
