@@ -70,7 +70,8 @@ type Users @model @auth(rules: [{allow: public}]) {
   id: ID!
   userEmail: String
   userName: String
-}``` 
+}
+``` 
 
 - You will need to ensure your backend is running first. From the Node-Backend dir, run `npm install && npm start`
 
