@@ -25,11 +25,58 @@ Magicshop provides the following
 - You will need an AWS account, the AWS CLI tool, and Amplify [installed](https://aws.amazon.com/getting-started/hands-on/build-ios-app-amplify/module-two/) on your machine
 - You will need AWS IVS setup, including having an [IAM user with the proper permissions](https://docs.aws.amazon.com/ivs/latest/LowLatencyUserGuide/getting-started.html)
 
-- You will need to generate Amplify config files before running the app. If you are setting the project up for the first time, from the root folder run 
+- You will need to generate Amplify config files before running the app. If you are setting the project up for the first time, from the magicshop folder run 
 
 `amplify init` and choose an `ios App` as your app type. 
 
+- You will also need to setup a Data model. Here is a starter schema that can be modified as necesscary 
+
+```
+type StreamPreviewInfoV0 @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  streamName: String
+  channelArn: String
+  s3StreamPreviewURL: String
+  chatRoomArn: String!
+}
+
+type LivestreamCache @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  liveStreams: String
+}
+
+type StreamInfo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  awsIVSIngestServer: String
+  awsIVSStreamKey: String
+  awsIVSPlaybackURL: String
+  channelArn: String
+  SellerStream: Sellers @hasOne
+  SellerId: String
+  stripeConnectAccountId: String
+  chatRoomArn: String
+}
+
+type Buyers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  BuyerUser: Users @hasOne
+}
+
+type Sellers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  SellerUser: Users @hasOne
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userEmail: String
+  userName: String
+}
+``` 
+
 - You will need to ensure your backend is running first. From the Node-Backend dir, run `npm install && npm start`
+
+- Run `pod install` from the magicshop folder
 
 - Then open a simulator in XCode and you should be able to run the base version of magicshop!
 
@@ -39,3 +86,14 @@ Magicshop provides the following
 - Please follow best security practices if you are running this on a live server. This includes secure endpoints, non-hardcoded keys, etc.
 - There are a few manual processes(such as seller onboarding) that take place outside the app. There is potential for these to be automated down the road.
 - Ensure you are regularly updating expirys on your IAM users and keys, as this is a common issue.
+
+
+## Screenshots
+
+
+![signal-2023-09-14-132251_002](https://github.com/user-attachments/assets/ccd03c34-c7d1-411c-834a-689c67c65bea)
+
+
+![Screenshot-0915-110635](https://github.com/user-attachments/assets/a0bba5e1-2147-4331-8976-ce74c262186a)
+
+
