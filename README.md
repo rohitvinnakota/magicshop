@@ -90,9 +90,10 @@ type Users @model @auth(rules: [{allow: public}]) {
 
 ## Screenshots
 
-![Screenshot-0915-110635](https://github.com/user-attachments/assets/2e9ec2ed-85a5-4d22-9632-515a78fc57af)
 
-![signal-2023-09-14-132251_002 (1)](https://github.com/user-attachments/assets/ee02e3ca-ee75-4112-8cb0-c9cbdb3fcda7)
+![signal-2023-09-14-132251_002](https://github.com/user-attachments/assets/ccd03c34-c7d1-411c-834a-689c67c65bea)
 
+
+![Screenshot-0915-110635](https://github.com/user-attachments/assets/a0bba5e1-2147-4331-8976-ce74c262186a)
 
 
