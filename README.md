@@ -86,3 +86,13 @@ type Users @model @auth(rules: [{allow: public}]) {
 - Please follow best security practices if you are running this on a live server. This includes secure endpoints, non-hardcoded keys, etc.
 - There are a few manual processes(such as seller onboarding) that take place outside the app. There is potential for these to be automated down the road.
 - Ensure you are regularly updating expirys on your IAM users and keys, as this is a common issue.
+
+
+## Screenshots
+
+![Screenshot-0915-110635](https://github.com/user-attachments/assets/2e9ec2ed-85a5-4d22-9632-515a78fc57af)
+
+![signal-2023-09-14-132251_002 (1)](https://github.com/user-attachments/assets/ee02e3ca-ee75-4112-8cb0-c9cbdb3fcda7)
+
+
+
