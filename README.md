@@ -29,6 +29,49 @@ Magicshop provides the following
 
 `amplify init` and choose an `ios App` as your app type. 
 
+- You will also need to setup a Data model. Here is a starter schema that can be modified as necesscary 
+
+```type StreamPreviewInfoV0 @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  streamName: String
+  channelArn: String
+  s3StreamPreviewURL: String
+  chatRoomArn: String!
+}
+
+type LivestreamCache @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  liveStreams: String
+}
+
+type StreamInfo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  awsIVSIngestServer: String
+  awsIVSStreamKey: String
+  awsIVSPlaybackURL: String
+  channelArn: String
+  SellerStream: Sellers @hasOne
+  SellerId: String
+  stripeConnectAccountId: String
+  chatRoomArn: String
+}
+
+type Buyers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  BuyerUser: Users @hasOne
+}
+
+type Sellers @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  SellerUser: Users @hasOne
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userEmail: String
+  userName: String
+}``` 
+
 - You will need to ensure your backend is running first. From the Node-Backend dir, run `npm install && npm start`
 
 - Run `pod install` from the magicshop folder
