@@ -1,0 +1,46 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+platform :ios, '14.0'
+
+target 'v0marketplace' do
+  source 'https://github.com/CocoaPods/Specs.git'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for v0marketplace
+  pod 'Amplify', '~> 1.0'             # required amplify dependency
+  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+  pod 'Amplify/Tools', '~> 1.0'       # allows to call amplify CLI from within Xcode
+  pod 'AmazonIVSBroadcast'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
+  pod 'AmazonIVSPlayer'
+  pod 'AWSMobileClient'
+  pod 'SwiftLint'
+  pod 'Kingfisher', '~> 7.6.2'
+  pod 'AmplifyPlugins/AWSDataStorePlugin'
+  pod 'StripePaymentSheet'
+  pod 'AlertToast'
+  pod 'AmazonIVSChat'
+  pod 'Stripe'
+  pod 'Starscream', '~> 4.0.0'
+  pod 'AnyCodable-FlightSchool', '~> 0.4.0'
+
+  target 'v0marketplaceTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'v0marketplaceUITests' do
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+        end
+    end
+  end
+end

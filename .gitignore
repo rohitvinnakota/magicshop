@@ -19,3 +19,10 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+# macOS system files
+.DS_Store
+
+# CocoaPods
+Pods/
+Podfile.lock
