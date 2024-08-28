@@ -100,6 +100,4 @@ type Users @model @auth(rules: [{allow: public}]) {
 ![signal-2023-09-14-132251_002](https://github.com/user-attachments/assets/ccd03c34-c7d1-411c-834a-689c67c65bea)
 
 
-![Screenshot-0915-110635](https://github.com/user-attachments/assets/a0bba5e1-2147-4331-8976-ce74c262186a)
-
 
